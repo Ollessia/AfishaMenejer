@@ -35,6 +35,23 @@ class AfishaManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void add8Film() {
+        AfishaManager manager = new AfishaManager();
+        manager.addFilm("Film1");
+        manager.addFilm("Film2");
+        manager.addFilm("Film3");
+        manager.addFilm("Film4");
+        manager.addFilm("Film5");
+        manager.addFilm("Film6");
+        manager.addFilm("Film7");
+        manager.addFilm("Film8");
+        String[] actual = manager.findLast();
+
+        String[] expected = {"Film8", "Film7", "Film6", "Film5", "Film4"};
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
 
     @Test
     public void findLast() {
